@@ -10,20 +10,36 @@ using System.Web.Http;
 
 namespace HelloAPI.Controllers
 {
+    /// <summary>
+    /// Base hello controller
+    /// </summary>
+    /// <seealso cref="System.Web.Http.ApiController" />
     public class BaseController : ApiController
     {
         protected IWriteToExternal Writer { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseController"/> class.
+        /// </summary>
         public BaseController()
         {
             Writer = GetWriter();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BaseController"/> class.
+        /// </summary>
+        /// <param name="writer">The writer.</param>
         public BaseController(IWriteToExternal writer)
         {
             Writer = writer;
         }
 
+        /// <summary>
+        /// Gets the writer specified in the config.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
         private IWriteToExternal GetWriter()
         {
             WriterType writeType = (WriterType)Enum.Parse(

@@ -8,9 +8,15 @@ using System.Web.Http.Results;
 
 namespace HelloAPI.Tests
 {
+    /// <summary>
+    /// Unit tests the hello controller.
+    /// </summary>
     [TestClass]
     public class TestHelloController
     {
+        /// <summary>
+        /// Tests the get.
+        /// </summary>
         [TestMethod]
         public void TestGet()
         {
@@ -29,6 +35,9 @@ namespace HelloAPI.Tests
             Assert.AreEqual("Hello World", contentResult.Content);
         }
 
+        /// <summary>
+        /// Tests the post.
+        /// </summary>
         [TestMethod]
         public void TestPost()
         {

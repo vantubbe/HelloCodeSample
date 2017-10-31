@@ -8,7 +8,7 @@ using HelloBusiness;
 namespace HelloAPI.Tests.IntegrationTests.Api
 {
     /// <summary>
-    /// Integration tests hello controller
+    /// Integration tests the hello controller.
     /// </summary>
     [TestClass]
     public class TestHelloController
