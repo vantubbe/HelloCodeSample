@@ -44,7 +44,7 @@ namespace HelloAPI.Controllers
         }
 
         /// <summary>
-        /// Gets .
+        /// Gets the hello world.
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -53,6 +53,10 @@ namespace HelloAPI.Controllers
             return this.Ok(_helloBusiness.HelloWorld());
         }
 
+        /// <summary>
+        /// Posts hello world to the writer.
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         public IHttpActionResult Post()
         {
